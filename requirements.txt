@@ -1,0 +1,10 @@
+streamlit
+fastapi
+python-dotenv
+google-generativeai
+openai-whisper
+uvicorn
+langchain
+langchain_community
+langchain_core
+moviepy
