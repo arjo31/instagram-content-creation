@@ -1,5 +1,14 @@
 # Instagram Content Creation Using AI
 
+# About
+An AI Tool which makes automatic content creation for Instagram posts, which supports caption generation for posts, reels and also can generate replies for a comment. Built using Streamlit and utilizes FastAPI for API integration with frontend. Also uses Google Gemini API for content generation.
+
+# Tech Stack
+1. Python
+2. Streamlit
+3. FastAPI
+4. Google Gemini API
+
 ## Steps To Run:
 
 1. Install a virtual environment.
