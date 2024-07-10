@@ -21,7 +21,8 @@ You will get the key from Google's AI Studio.
 4. Start the frontend by running the command :
 
 ```bash
-streamlit run 1_Home.py
+cd pages
+streamlit run Home.py
 ```
 
 5. Start the FastAPI Server by running the command :
