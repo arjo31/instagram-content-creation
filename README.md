@@ -1,13 +1,15 @@
 # Instagram Content Creation Using AI
 
 # About
-An AI Tool which makes automatic content creation for Instagram posts, which supports caption generation for posts, reels and also can generate replies for a comment. Built using Streamlit and utilizes FastAPI for API integration with frontend. Also uses Google Gemini API for content generation.
+An AI Tool which makes automatic content creation for Instagram, LinkedIn and Twitter (X) posts, which supports caption generation for posts, reels and also can generate replies for a comment. Built using Streamlit and utilizes FastAPI for API integration with frontend. Also uses Google Gemini API for content generation. MongoDB Database is used to store user details
 
 # Tech Stack
 1. Python
 2. Streamlit
 3. FastAPI
 4. Google Gemini API
+5. MongoDB
+6. MoviePy
 
 ## Steps To Run:
 
@@ -23,6 +25,7 @@ pip install -r requirements.txt
 
 ```bash
 GOOGLE_GEMINI_API_KEY = <Your_Key>
+MONGO_DB_URI = <Mongo_Db server key>
 ```
 
 You will get the key from Google's AI Studio.
@@ -30,18 +33,13 @@ You will get the key from Google's AI Studio.
 4. Start the frontend by running the command :
 
 ```bash
-cd pages
-streamlit run Home.py
+streamlit run app.py
 ```
 
 5. Start the FastAPI Server by running the command :
 
 ```bash
-cd server
+cd src/server
 
 python fast_server.py
 ```
-
-## Currently Working On:
-
-Login and Authorization
