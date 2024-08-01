@@ -10,4 +10,5 @@ langchain_core
 moviepy
 pymongo[srv]
 ffmpeg
+bcrypt
 -e .

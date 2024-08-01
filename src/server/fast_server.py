@@ -7,6 +7,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 
+import bcrypt
 import google.generativeai as genai
 import uvicorn
 from dotenv import load_dotenv
@@ -196,10 +197,11 @@ async def twitter_post(prompt : str = Form(...)):
 @app.post("/login")
 async def login(username : str = Form(...), password : str = Form(...)):
     try:
+        password = password.encode('utf-8')
         user = {'username' : username, 'password' : password}
         if db.find_one({"username" : user['username']}):
             user_records = db.find_one({"username" : user['username']})
-            if user['password']==user_records['password']:
+            if bcrypt.checkpw(password=password, hashed_password=user_records['password']):
                 return JSONResponse(content={'message' : "Login successful", 'name' : user_records['name']}, status_code=200)
             else:
                 return JSONResponse(content={'message' : "Password is incorrect"}, status_code=401)
@@ -210,11 +212,13 @@ async def login(username : str = Form(...), password : str = Form(...)):
 @app.post("/signup")
 async def signup(name : str = Form(...), username : str = Form(...), email : str = Form(...), password : str = Form(...)):
     try:
+        password = password.encode('utf-8')
+        hashed_password = bcrypt.hashpw(password, bcrypt.gensalt())
         user = {
             'name' : name,
             'username' : username,
             'email' : email,
-            'password' : password,
+            'password' : hashed_password,
             'chats' : []
         }
         if db.find_one({'username' : user['username']}):
