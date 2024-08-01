@@ -9,4 +9,5 @@ langchain_community
 langchain_core
 moviepy
 pymongo[srv]
+ffmpeg
 -e .

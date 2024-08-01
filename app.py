@@ -7,7 +7,6 @@ import streamlit as st
 
 from src.instagram.instagram import instagram
 from src.linkedin.linkedin import linkedin
-from src.models.model import User
 from src.twitter.twitter import twitter
 
 st.set_page_config(page_title="AI Content Creation Tool")
