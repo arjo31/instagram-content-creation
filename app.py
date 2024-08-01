@@ -2,8 +2,6 @@ import sys
 
 sys.dont_write_bytecode = True
 
-import time
-
 import requests
 import streamlit as st
 
