@@ -8,7 +8,7 @@ import streamlit as st
 
 def linkedin():
     def generate_linkedin_posts(prompt : str, max_length : int):
-        url = "http://localhost:5000/generate-linkedin-content"
+        url = "https://fastapi-server-fnqk.onrender.com/generate-linkedin-content"
         data = {'prompt' : prompt, 'max_length' : max_length}
         res = requests.post(url=url, data=data)
         return res

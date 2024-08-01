@@ -9,7 +9,6 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 import google.generativeai as genai
 import uvicorn
-from bson.json_util import dumps
 from dotenv import load_dotenv
 from fastapi import FastAPI, File, Form, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
@@ -17,7 +16,6 @@ from fastapi.responses import JSONResponse
 from moviepy.editor import VideoFileClip, concatenate_videoclips
 
 from db.config import ConfigDB
-from models.model import User
 
 load_dotenv()
 

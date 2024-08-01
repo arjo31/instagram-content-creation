@@ -6,7 +6,7 @@ def twitter():
     st.title("Spillmate Twitter Content Generation")
 
     def generate_required_content(prompt : str):
-        url = "http://localhost:5000/generate-twitter-content"
+        url = "https://fastapi-server-fnqk.onrender.com/generate-twitter-content"
         data = {'prompt' : prompt}
         res = requests.post(url=url, data=data)
         return res

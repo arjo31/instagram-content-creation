@@ -31,7 +31,7 @@ def signup_page():
         user = {'name' : name, 'username' : username, 'email' : email, 'password' : password}
         signup_button = st.button(label="Sign Up", type="primary")
         if signup_button:
-            res = requests.post(url="http://localhost:5000/signup", data=user)
+            res = requests.post(url="https://fastapi-server-fnqk.onrender.com/signup", data=user)
 
             if res.status_code==200:
                 st.session_state.user = name
@@ -57,7 +57,7 @@ def login_page():
         password = st.text_input(key="lp", label="Password", placeholder="Enter your password", type='password')
         login_button = st.button(label="Log In", type="primary")
         if login_button:
-            res = requests.post(url="http://localhost:5000/login", data={
+            res = requests.post(url="https://fastapi-server-fnqk.onrender.com/login", data={
                 'username' : username,
                 'password' : password
             })

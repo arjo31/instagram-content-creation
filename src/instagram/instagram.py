@@ -8,18 +8,18 @@ import streamlit as st
 
 def send_response(content):
     data = {'user_input' : content}
-    res = requests.post(url="http://localhost:5000/create-post", data=data)
+    res = requests.post(url="https://fastapi-server-fnqk.onrender.com/create-post", data=data)
     return res
 
 def create_reel_caption(video, text):
     file = {'file': video}
     data = {'data': text}
-    res = requests.post(url="http://localhost:5000/create-caption-from-video", files=file, data=data)
+    res = requests.post(url="https://fastapi-server-fnqk.onrender.com/create-caption-from-video", files=file, data=data)
     return res
 
 def generate_reply(comment : str):
     data = {'comment' : comment}
-    response = requests.post(url="http://localhost:5000/generate-reply", data = data)
+    response = requests.post(url="https://fastapi-server-fnqk.onrender.com/generate-reply", data = data)
     return response
 
 def instagram():
