@@ -1,7 +1,11 @@
 # Instagram Content Creation Using AI
 
 # About
-An AI Tool which makes automatic content creation for Instagram, LinkedIn and Twitter (X) posts, which supports caption generation for posts, reels and also can generate replies for a comment. Built using Streamlit and utilizes FastAPI for API integration with frontend. Also uses Google Gemini API for content generation. MongoDB Database is used to store user details
+An AI Tool which makes automatic content creation for Instagram, LinkedIn and Twitter (X) posts, which supports caption generation for posts, reels and also can generate replies for a comment. Built using Streamlit and utilizes FastAPI for API integration with frontend. Also uses Google Gemini API for content generation. MongoDB Database is used to store user details.
+
+Website : [https://spillmatecontentcreation.streamlit.app/]
+
+Note : The backend server which is hosted on Render (free version) takes about 1 minute and 30 seconds to spring back to life due to inactivity. So if you try out my website, please wait for about 1 minute and 30 seconds to use the application efficiently. Thanks for your patience!!
 
 # Tech Stack
 1. Python
