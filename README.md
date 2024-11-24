@@ -29,7 +29,7 @@ pip install -r requirements.txt
 
 ```bash
 GOOGLE_GEMINI_API_KEY = <Your_Key>
-MONGO_DB_URI = <Mongo_Db server key>
+MONGO_DB_URI = <Mongo_DB server key>
 ```
 
 You will get the key from Google's AI Studio.
